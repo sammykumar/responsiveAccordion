@@ -1,11 +1,22 @@
 {
-  "resources": {
-    "head": 
-    [
-    	{
+	"resources": 
+	{
+		"head":
+		[{
 			"type":"style",
 			"src":"styles.css"
-    	}
-    ]
-  }
+		}]
+	},
+			
+	"options": 
+	{
+		"properties": 
+		{
+			"title": 
+			{
+				"title": "Responsive Accordion",
+				"type": "string"
+			}
+		}
+	}
 }
