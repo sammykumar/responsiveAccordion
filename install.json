@@ -1,6 +1,11 @@
 {
   "resources": {
-    "head": [{…}, …],
-    "body": [{…}, …]
+    "head": 
+    [
+    	{
+			"type":"style",
+			"src":"styles.css"
+    	}
+    ]
   }
 }
