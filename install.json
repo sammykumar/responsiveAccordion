@@ -26,7 +26,7 @@
 			
 			"images":
 			{
-				"title":"Upload",
+				"title":"Accordion Setup",
 				"type":"array",
 				"maxItems":5,
 				
@@ -39,10 +39,28 @@
 					{
 						"image":
 						{
-							"title":"Slide",
+							"title":"Upload",
 							"type":"string",
 							"format":"image"
-						}	
+						},
+						
+						"title":
+						{
+							"title":"Title",
+							"type":"string"
+						},
+						"caption":
+						{
+							"title":"Caption",
+							"type":"string"
+						},	
+						
+						"link":
+						{
+							"title":"Link",
+							"type":"string"
+						}
+							
 					},
 					
 					"required":
