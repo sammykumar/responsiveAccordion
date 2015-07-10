@@ -24,6 +24,12 @@
 		        "format": "element"
 			},
 			
+			"height":
+			{
+				"title":"Enter height",
+				"type":"integer"
+			},
+			
 			"images":
 			{
 				"title":"Accordion Setup",
