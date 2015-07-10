@@ -10,7 +10,7 @@ var links = [];
 
 var height = options.height;
 
-for (i =0; i < options.images.length; i ++)
+for (i = 1; i < options.images.length; i ++)
 {
 	images.push(options.images[i].image);
 	titles.push(options.images[i].title);
