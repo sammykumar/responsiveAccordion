@@ -5,6 +5,11 @@
 		{
 			"type":"style",
 			"src":"./styles.css"
+		},
+		"body":
+		{
+			"type":"style",
+			"src":"./script.css"
 		}
 	},
 	
