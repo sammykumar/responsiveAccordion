@@ -71,21 +71,11 @@
   font-size: 13.5px;
 }
 /*
-.eager-accordion ul li:nth-child(1) {
-  background-image: url(../img/accordian/eldorado.png);
-}
-.eager-accordion ul li:nth-child(2) {
-  background-image: url(../img/accordian/lancer.png);
-}
-.eager-accordion ul li:nth-child(3) {
-  background-image: url(../img/accordian/eclipse.png);
-}
-.eager-accordion ul li:nth-child(4) {
-  background-image: url(../img/accordian/370z.png);
-}
-.eager-accordion ul li:nth-child(5) {
-  background-image: url(../img/accordian/nismoz.png);
-}
+.eager-accordion ul li:nth-child(1) {background-image: url(../img/accordian/eldorado.png);}
+.eager-accordion ul li:nth-child(2) {background-image: url(../img/accordian/lancer.png);}
+.eager-accordion ul li:nth-child(3) {background-image: url(../img/accordian/eclipse.png);}
+.eager-accordion ul li:nth-child(4) {background-image: url(../img/accordian/370z.png);}
+.eager-accordion ul li:nth-child(5) {background-image: url(../img/accordian/nismoz.png);}
 */
 
 .eager-accordion ul:hover li {
@@ -101,4 +91,8 @@
   opacity: 1;
   -webkit-transform: translateX(0);
   transform: translateX(0);
+}
+
+.test {
+	color:red;
 }
