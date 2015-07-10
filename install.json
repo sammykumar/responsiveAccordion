@@ -8,8 +8,8 @@
 		}],
 		"body":
 		[{
-			"type":"style",
-			"src":"script.css"
+			"type":"script",
+			"src":"script.js"
 		}]
 	},
 	
