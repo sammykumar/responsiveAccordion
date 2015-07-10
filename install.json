@@ -2,20 +2,46 @@
 	"resources": 
 	{
 		"head":
-		[{
+		{
 			"type":"style",
 			"src":"styles.css"
-		}]
+		}
 	},
-			
-	"options": 
+	
+	"options":
 	{
-		"properties": 
+		"properties":
 		{
-			"title": 
+			"location": 
 			{
-				"title": "Responsive Accordion",
-				"type": "string"
+		        "title": "Location",
+		        "type": "object",
+		        "format": "element"
+			},
+			
+			"images":
+			{
+				"title":"Upload",
+				"type":"array",
+				"maxItems":5,
+				
+				"items":
+				{
+					"title":"Slide",
+					"type":"object",
+					
+					"properties":
+					{
+						"image1":
+						{
+							"title":"Uploaded Image",
+							"type":"string",
+							"format":"image"
+						}
+					},
+					"required":
+					["image"]
+				}
 			}
 		}
 	}
