@@ -1,21 +1,21 @@
 /*Accordian Styles */
 /* Accordion Height is 250px */
 
-.accordion {
+.eager-accordion {
   width: 100%;
   max-width: 1080px;
-  height: 250px;
+  /*height: 250px;*/
   overflow: hidden;
   margin: 50px auto;
 }
-.accordion ul {
+.eager-accordion ul {
   width: 100%;
   display: table;
   table-layout: fixed;
   margin: 0;
   padding: 0;
 }
-.accordion ul li {
+.eager-accordion ul li {
   display: table-cell;
   vertical-align: bottom;
   position: relative;
@@ -25,12 +25,12 @@
   background-position: center center;
   transition: all 500ms ease;
 }
-.accordion ul li div {
+.eager-accordion ul li div {
   display: block;
   overflow: hidden;
   width: 100%;
 }
-.accordion ul li div a {
+.eager-accordion ul li div a {
   display: block;
   height: 250px;
   width: 100%;
@@ -44,7 +44,7 @@
   font-family: Open Sans, sans-serif;
   transition: all 200ms ease;
 }
-.accordion ul li div a * {
+.eager-accordion ul li div a * {
   opacity: 0;
   margin: 0;
   width: 100%;
@@ -58,7 +58,7 @@
   -webkit-transition: all 400ms ease;
   transition: all 400ms ease;
 }
-.accordion ul li div a h2 {
+.eager-accordion ul li div a h2 {
   font-family: Raleway,sans-serif;
   text-overflow: clip;
   font-size: 24px;
@@ -66,36 +66,38 @@
   margin-bottom: 2px;
   top: 160px;
 }
-.accordion ul li div a p {
+.eager-accordion ul li div a p {
   top: 160px;
   font-size: 13.5px;
 }
-.accordion ul li:nth-child(1) {
+/*
+.eager-accordion ul li:nth-child(1) {
   background-image: url(../img/accordian/eldorado.png);
 }
-.accordion ul li:nth-child(2) {
+.eager-accordion ul li:nth-child(2) {
   background-image: url(../img/accordian/lancer.png);
 }
-.accordion ul li:nth-child(3) {
+.eager-accordion ul li:nth-child(3) {
   background-image: url(../img/accordian/eclipse.png);
 }
-.accordion ul li:nth-child(4) {
+.eager-accordion ul li:nth-child(4) {
   background-image: url(../img/accordian/370z.png);
 }
-.accordion ul li:nth-child(5) {
+.eager-accordion ul li:nth-child(5) {
   background-image: url(../img/accordian/nismoz.png);
 }
+*/
 
-.accordion ul:hover li {
+.eager-accordion ul:hover li {
   width: 8%;
 }
-.accordion ul:hover li:hover {
+.eager-accordion ul:hover li:hover {
   width: 60%;
 }
-.accordion ul:hover li:hover a {
+.eager-accordion ul:hover li:hover a {
   background: rgba(0, 0, 0, 0.4);
 }
-.accordion ul:hover li:hover a * {
+.eager-accordion ul:hover li:hover a * {
   opacity: 1;
   -webkit-transform: translateX(0);
   transform: translateX(0);

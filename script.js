@@ -28,9 +28,6 @@ console.log(height);
 //2. Append images and height into CSS 
 // NEW LOGIC: Keep existing styles.css. Append rules that the involve either images or height properties
 
-var sheets = document.styleSheets;
-
-console.log(sheets);
 
 //3. Build accordion HTML
 /*
