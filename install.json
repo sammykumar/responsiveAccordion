@@ -70,9 +70,29 @@
 					},
 					
 					"required":
-					["image"]
+					["image"]	
+				},
+				
+				"default":
+				[
+					{
+						"image":"//www.filepicker.io/api/file/rDwuEpINRbCRtpK5lZUI",
+						"title": "Nissan 370Z",
+						"caption":"V6 Naturally Aspirated"
+					},
 					
-				}
+					{
+						"image":"//www.filepicker.io/api/file/u9Khn99RmWABRdY6tHHp",
+						"title": "Nissan GTR",
+						"caption":"V6 Twin Turboed"
+					},
+					
+					{
+						"image":"//www.filepicker.io/api/file/hRz6M58JTzyFCtKa7Jaj",
+						"title": "Lykan Hypersport",
+						"caption":"3.4 Million Dollar Car"
+					}
+				] 
 			}
 		}
 	}
