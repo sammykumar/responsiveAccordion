@@ -48,7 +48,7 @@ for (i = 0; i < images.length; i ++)
 	entireCSSRule += imagesRule[i];
 }
 
-console.log(entireCSSRule);
+//console.log(entireCSSRule);
 
 css.innerHTML = entireCSSRule;
 //css.innerHTML = ".test { color:aqua;}"; testing
@@ -75,4 +75,36 @@ document.body.appendChild(css); //DOM loads before so you dont see this in sourc
 		
 */
 
+var div = document.createElement("div");
+var parentul = document.createElement("ul");
 
+
+
+var slides = []; //contains repeatable elements
+
+for (i = 0; i < images.length; i ++)
+{
+	var li = document.createElement("li");
+	var liDiv = document.createElement("div");
+	var anchor = document.createElement("a");
+	var h2 = document.createElement("h2");
+	var p = document.createElement("p");
+	
+	p.innerHTML = captions[i];
+	h2.innerHTML = titles[i];
+	anchor.href = links[i];
+	
+	//Building that repeatable elements
+	anchor.appendChild(h2);
+	anchor.appendChild(p);
+	liDiv.appendChild(anchor);
+	li.appendChild(liDiv);
+	
+	
+	//add to array
+	slides[i] = li;
+}
+
+div.appendChild(parentul);
+div.classList.add("eager-accordion");
+console.log(div);
