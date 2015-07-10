@@ -10,7 +10,7 @@ var links = [];
 
 var height = options.height;
 
-for (i = 1; i < options.images.length; i ++)
+for (i = 0; i < options.images.length; i ++)
 {
 	images.push(options.images[i].image);
 	titles.push(options.images[i].title);
@@ -27,7 +27,10 @@ console.log(height);
 
 //2. Append images and height into CSS 
 // NEW LOGIC: Keep existing styles.css. Append rules that the involve either images or height properties
+//A. Add height to .eager-accordion
 
+	
+//B. Add images to eager-accordion ul li:nth-child(ARRAY INDEX HERE)
 
 //3. Build accordion HTML
 /*
