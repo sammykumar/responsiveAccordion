@@ -27,20 +27,22 @@
 				
 				"items":
 				{
-					"title":"Slide",
+					"title":"Images",
 					"type":"object",
 					
 					"properties":
 					{
-						"image1":
+						"image":
 						{
-							"title":"Uploaded Image",
+							"title":"Slide",
 							"type":"string",
 							"format":"image"
-						}
+						}	
 					},
+					
 					"required":
 					["image"]
+					
 				}
 			}
 		}
