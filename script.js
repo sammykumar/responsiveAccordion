@@ -3,6 +3,9 @@
 // 1. Declare all variables
 
 var options = INSTALL_OPTIONS;
+
+var locationToAdd = options.location;
+console.log(locationToAdd);
 var images = [];
 var titles = [];
 var captions = [];
@@ -18,13 +21,6 @@ for (i = 0; i < options.images.length; i ++)
 	captions.push(options.images[i].caption);
 	links.push(options.images[i].link);
 }
-
-/*console.log(images);
-console.log(titles);
-console.log(captions);
-console.log(links);
-console.log(height);*/
-
 
 //2. Append images and height into CSS 
 // NEW LOGIC: Keep existing styles.css. Append rules that the involve either images or height properties
@@ -47,8 +43,6 @@ for (i = 0; i < images.length; i ++)
 {
 	entireCSSRule += imagesRule[i];
 }
-
-//console.log(entireCSSRule);
 
 css.innerHTML = entireCSSRule;
 //css.innerHTML = ".test { color:aqua;}"; testing
@@ -74,7 +68,7 @@ document.body.appendChild(css); //DOM loads before so you dont see this in sourc
 	</div>
 		
 */
-
+div = Eager.createElement(locationToAdd);
 var div = document.createElement("div");
 var parentul = document.createElement("ul");
 
@@ -106,4 +100,20 @@ for (i = 0; i < images.length; i ++)
 
 div.appendChild(parentul);
 div.classList.add("eager-accordion");
-document.body.appendChild(div);
+
+
+/*Begin helper functions 
+(function()
+	{
+		if (!document.addEventListener) return;
+		
+		var add = function()
+		{
+		 div
+		}
+		
+		if (document.readyState == 'loading')
+       		document.addEventListener('DOMContentLoaded', add);
+		else
+       		add();
+)()*/
