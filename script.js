@@ -68,7 +68,6 @@ document.body.appendChild(css); //DOM loads before so you dont see this in sourc
 	</div>
 		
 */
-div = Eager.createElement(locationToAdd);
 var div = document.createElement("div");
 var parentul = document.createElement("ul");
 
@@ -101,6 +100,7 @@ for (i = 0; i < images.length; i ++)
 div.appendChild(parentul);
 div.classList.add("eager-accordion");
 
+document.body.appendChild(div);
 
 /*Begin helper functions 
 (function()
