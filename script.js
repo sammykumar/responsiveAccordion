@@ -35,7 +35,7 @@
 	var imagesRule = [];
 	for (i = 0; i < images.length; i ++)
 	{
-		imagesRule.push(".eager-accordion ul li:nth-child(" + (i+1) + ") {background-image: url(http://" + images[i] + ");}")
+		imagesRule.push(".eager-accordion ul li:nth-child(" + (i+1) + ") {background-image: url(https://" + images[i] + ");}")
 	}
 	
 	//C. Add css rule to page
