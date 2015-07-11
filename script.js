@@ -100,11 +100,10 @@ for (i = 0; i < images.length; i ++)
 	liDiv.appendChild(anchor);
 	li.appendChild(liDiv);
 	
+	parentul.appendChild(li);
 	
-	//add to array
-	slides[i] = li;
 }
 
 div.appendChild(parentul);
 div.classList.add("eager-accordion");
-console.log(div);
+document.body.appendChild(div);
