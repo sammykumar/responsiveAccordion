@@ -76,6 +76,10 @@
 				"default":
 				[
 					{
+						"height":250
+					},
+					
+					{
 						"image":"//www.filepicker.io/api/file/JRDnZJbWQByU3XBE4lXV",
 						"title": "Nissan 370Z",
 						"caption":"V6 Naturally Aspirated"
