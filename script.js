@@ -15,12 +15,12 @@
 	var height = options.height;
 	
 	
-	for (i = 0; i < options.images.length; i ++)
+	for (i = 0; i < options.imagesArr.length; i ++)
 	{
-		images.push(options.images[i].image);
-		titles.push(options.images[i].title);
-		captions.push(options.images[i].caption);
-		links.push(options.images[i].link);
+		images.push(options.imagesArr[i].image);
+		titles.push(options.imagesArr[i].title);
+		captions.push(options.imagesArr[i].caption);
+		links.push(options.imagesArr[i].link);
 	}
 	
 	//2. Append images and height into CSS 
@@ -103,7 +103,8 @@
 
 
 	var add = function(){
-  		div = Eager.createElement(locationToAdd);
+		document.body.appendChild(div);
+  		//div = Eager.createElement(locationToAdd);
   	}
 
   	if (document.readyState == 'loading')
