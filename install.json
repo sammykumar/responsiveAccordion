@@ -1,113 +1,101 @@
 {
-	"resources": 
-	{
-		"head": [{
-			"type":"style",
-			"src":"styles.css"
-		}, {
-			"type":"script",
-			"src":"script.js"
-		}]
-	},
-	
-	"options":
-	{
-		"properties":
-		{
-			"location": 
-			{
-		        "title": "Location",
-		        "type": "object",
-		        "format": "element",
-		        "order": 1
-			},
-			
-			"height":
-			{
-				"title":"Enter height",
-				"type":"integer",
-				"order":2,
-				"default":250
-			},
-			
-			"images":
-			{
-				"title":"Accordion Setup",
-				"type":"array",
-				"maxItems":5,
-				"order": 3,
-				
-				"items":
-				{
-					"title":"Images",
-					"type":"object",
-					
-					"properties":
-					{
-						"url":
-						{
-							"title":"Upload",
-							"type":"string",
-							"format":"image"
-						},
-						
-						"title":
-						{
-							"title":"Title",
-							"type":"string"
-						},
-						"caption":
-						{
-							"title":"Caption",
-							"type":"string"
-						},	
-						
-						"linkHref":
-						{
-							"title":"Link",
-							"type":"string"
-						}
-							
-					},
-					
-					"required":
-					["image"]	
-				},
-				
-				"default":
-				[
-					
-					{
-						"image":"//www.filepicker.io/api/file/JRDnZJbWQByU3XBE4lXV",
-						"title": "Nissan 370Z",
-						"caption":"V6 Naturally Aspirated"
-					},
-					
-					{
-						"image":"//www.filepicker.io/api/file/YIXvSnThSkKzYaw1fFag",
-						"title": "Nissan GTR",
-						"caption":"V6 Twin Turboed"
-					},
-					
-					{
-						"image":"//www.filepicker.io/api/file/MXiHNErLQ8e6CWhtGmyw",
-						"title": "Porsche 911 GT3",
-						"caption":"Deadliest car known to man"
-					},
-						
-					{
-						"image":"//www.filepicker.io/api/file/unSwaSXRhu86Ky5SqpMb",
-						"title": "Toyota FT-1 Concept",
-						"caption":"New Supra?"
-					},
-					
-					{
-						"image":"//www.filepicker.io/api/file/kZZLHrqXSkC0cPvBeQqx",
-						"title": "Lykan Hypersport",
-						"caption":"3.4 Million Dollar Car"
-					}
-				] 
-			}
-		}
-	}
+  "resources":
+  {
+    "head":
+    [
+      {
+        "type": "style",
+        "src": "styles.css"
+      },
+      {
+        "type": "script",
+        "src": "script.js"
+      }
+    ]
+  },
+  "options":
+  {
+    "properties":
+    {
+      "location":
+      {
+        "title": "Location",
+        "type": "object",
+        "format": "element",
+        "order": 1
+      },
+      "height":
+      {
+        "title": "Enter height",
+        "type": "integer",
+        "order": 2,
+        "default": 250
+      },
+      "images":
+      {
+        "title": "Accordion Setup",
+        "type": "array",
+        "maxItems":5,
+        "order": 3,
+        "items":
+        {
+          "title": "Images",
+          "type": "object",
+          "properties":
+          {
+            "url":
+            {
+              "title": "Upload",
+              "type": "string",
+              "format": "image"
+            },
+            "title":
+            {
+              "title": "Title",
+              "type": "string"
+            },
+            "caption":
+            {
+              "title": "Caption",
+              "type": "string"
+            },
+            "linkHref":
+            {
+              "title": "Link",
+              "type": "string"
+            }
+          },
+          "required": ["image"]
+        },
+        "default":
+        [
+          {
+            "url": "//www.filepicker.io/api/file/JRDnZJbWQByU3XBE4lXV",
+            "title": "Nissan 370Z",
+            "caption": "V6 Naturally Aspirated"
+          },
+          {
+            "url": "//www.filepicker.io/api/file/YIXvSnThSkKzYaw1fFag",
+            "title": "Nissan GTR",
+            "caption": "V6 Twin Turboed"
+          },
+          {
+            "url": "//www.filepicker.io/api/file/MXiHNErLQ8e6CWhtGmyw",
+            "title": "Porsche 911 GT3",
+            "caption": "Deadliest car known to man"
+          },
+          {
+            "url": "//www.filepicker.io/api/file/unSwaSXRhu86Ky5SqpMb",
+            "title": "Toyota FT-1 Concept",
+            "caption": "New Supra?"
+          },
+          {
+            "url": "//www.filepicker.io/api/file/kZZLHrqXSkC0cPvBeQqx",
+            "title": "Lykan Hypersport",
+            "caption": "3.4 Million Dollar Car"
+          }
+        ]
+      }
+    }
+  }
 }

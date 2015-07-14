@@ -4,7 +4,7 @@
 .eager-accordion {
   width: 100%;
   max-width: 990px;
-  /*height: 250px;*/
+  min-height: 25px;
   overflow: hidden;
   margin: 50px auto;
 }
@@ -20,10 +20,10 @@
   vertical-align: bottom;
   position: relative;
   width: 16.666%;
-  height: 250px;
   background-repeat: no-repeat;
   background-position: center center;
   transition: all 500ms ease;
+  background-size: cover;
 }
 .eager-accordion ul li div {
   display: block;
