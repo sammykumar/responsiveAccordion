@@ -103,8 +103,8 @@
 
 
 	var add = function(){
-		document.body.appendChild(div);
-  		//div = Eager.createElement(locationToAdd);
+		//document.body.appendChild(div);
+  		div = Eager.createElement(locationToAdd);
   	}
 
   	if (document.readyState == 'loading')
