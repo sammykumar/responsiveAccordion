@@ -24,28 +24,22 @@
         "format": "element",
         "order": 1
       },
-      "height":
-      {
-        "title": "Enter height",
-        "type": "integer",
-        "order": 2,
-        "default": 250
-      },
       "images":
       {
         "title": "Accordion Setup",
+        "description": "Add up to 5 images to the accordion.",
         "type": "array",
-        "maxItems":5,
-        "order": 3,
+        "maxItems": 5,
+        "order": 2,
         "items":
         {
-          "title": "Images",
+          "title": "Image",
           "type": "object",
           "properties":
           {
             "url":
             {
-              "title": "Upload",
+              "title": "URL",
               "type": "string",
               "format": "image"
             },
@@ -62,10 +56,11 @@
             "linkHref":
             {
               "title": "Link",
+              "description": "Optionally make the image a link.",
               "type": "string"
             }
           },
-          "required": ["image"]
+          "required": ["url"]
         },
         "default":
         [
@@ -83,18 +78,15 @@
             "url": "//www.filepicker.io/api/file/MXiHNErLQ8e6CWhtGmyw",
             "title": "Porsche 911 GT3",
             "caption": "Deadliest car known to man"
-          },
-          {
-            "url": "//www.filepicker.io/api/file/unSwaSXRhu86Ky5SqpMb",
-            "title": "Toyota FT-1 Concept",
-            "caption": "New Supra?"
-          },
-          {
-            "url": "//www.filepicker.io/api/file/kZZLHrqXSkC0cPvBeQqx",
-            "title": "Lykan Hypersport",
-            "caption": "3.4 Million Dollar Car"
           }
         ]
+      },
+      "height":
+      {
+        "title": "Accordion Height",
+        "type": "integer",
+        "order": 3,
+        "default": 250
       }
     }
   }

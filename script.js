@@ -12,13 +12,15 @@
 
   var options = INSTALL_OPTIONS;
 
-  var styleEl = document.createElement('style');
-  var styleString = '.eager-accordion { height:' + options.height + 'px }\n';
-  for (var i = 0; i < options.images.length; i++) {
-    styleString += '.eager-accordion ul li:nth-child(' + (i + 1) + ') { background-image: url("' + options.images[i].url + '") }\n';
-  }
-  styleEl.innerHTML = styleString;
-  document.body.appendChild(styleEl);
+  var addStyles = function(options) {
+    var styleEl = document.createElement('style');
+    var styleString = '.eager-accordion { height:' + options.height + 'px }\n';
+    for (var i = 0; i < options.images.length; i++) {
+      styleString += '.eager-accordion ul li:nth-child(' + (i + 1) + ') { background-image: url("' + options.images[i].url + '") }\n';
+    }
+    styleEl.innerHTML = styleString;
+    document.body.appendChild(styleEl);
+  };
 
   var buildAccordian = function(images) {
     /*
@@ -70,6 +72,9 @@
   }
 
   ready(function(){
-    Eager.createElement(options.location).appendChild(buildAccordian(options.images));
+    addStyles(options);
+
+    var eagerAppEl = Eager.createElement(options.location);
+    eagerAppEl.appendChild(buildAccordian(options.images));
   });
 })();
