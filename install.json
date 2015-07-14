@@ -19,18 +19,18 @@
     {
       "location":
       {
+        "order": 1,
         "title": "Location",
         "type": "object",
-        "format": "element",
-        "order": 1
+        "format": "element"
       },
       "images":
       {
+        "order": 2,
         "title": "Accordion Setup",
         "description": "Add up to 5 images to the accordion.",
         "type": "array",
         "maxItems": 5,
-        "order": 2,
         "items":
         {
           "title": "Image",
@@ -39,22 +39,26 @@
           {
             "url":
             {
+              "order": 1,
               "title": "URL",
               "type": "string",
               "format": "image"
             },
             "title":
             {
+              "order": 2,
               "title": "Title",
               "type": "string"
             },
             "caption":
             {
+              "order": 3,
               "title": "Caption",
               "type": "string"
             },
             "linkHref":
             {
+              "order": 4,
               "title": "Link",
               "description": "Optionally make the image a link.",
               "type": "string"
@@ -83,9 +87,9 @@
       },
       "height":
       {
+        "order": 3,
         "title": "Accordion Height",
         "type": "integer",
-        "order": 3,
         "default": 250
       }
     }
