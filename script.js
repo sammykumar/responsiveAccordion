@@ -102,12 +102,13 @@
 
 
 	var add = function(){
-		//document.body.appendChild(div);
+		document.body.appendChild(div);
   		//locationToAdd.appendChild(div);
   		//console.log(locationToAdd);
   		var el = Eager.createElement(locationToAdd);
 
-  		el.innerHTML = "<p>TEST</p>";
+  		el.innerHTML = div;
+  		console.log(el);
   	}
 
   	if (document.readyState == 'loading')
