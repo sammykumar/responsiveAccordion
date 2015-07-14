@@ -13,7 +13,6 @@
 	var links = [];
 	
 	var height = options.height;
-	var el = Eager.createElement(locationToAdd);
 	
 	for (i = 0; i < options.imagesArr.length; i ++)
 	{
@@ -106,7 +105,9 @@
 		//document.body.appendChild(div);
   		//locationToAdd.appendChild(div);
   		//console.log(locationToAdd);
-  		el.appendChild(div);
+  		var el = Eager.createElement(locationToAdd);
+
+  		el.innerHTML = "<p>TEST</p>";
   	}
 
   	if (document.readyState == 'loading')
