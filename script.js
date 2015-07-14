@@ -1,116 +1,72 @@
-/* Accordion Helper Helper */
 (function(){
-  if (!document.addEventListener) return;
-
-  // 1. Declare all variables
-
-	var options = INSTALL_OPTIONS;
-	
-	var locationToAdd = options.location;
-	var images = [];
-	var titles = [];
-	var captions = [];
-	var links = [];
-	
-	var height = options.height;
-	
-	for (i = 0; i < options.imagesArr.length; i ++)
-	{
-		images.push(options.imagesArr[i].image);
-		titles.push(options.imagesArr[i].title);
-		captions.push(options.imagesArr[i].caption);
-		links.push(options.imagesArr[i].link);
-	}
-	
-	//2. Append images and height into CSS 
-	// NEW LOGIC: Keep existing styles.css. Append rules that the involve either images or height properties
-	var css = document.createElement("style");
-	css.type = "text/css";
-	
-	//A. Add height to .eager-accordion
-	var heightRule = ".eager-accordion { height:" + height + "px; }";
-	
-	//B. Add images to eager-accordion ul li:nth-child(ARRAY INDEX HERE)
-	var imagesRule = [];
-	for (i = 0; i < images.length; i ++)
-	{
-		imagesRule.push(".eager-accordion ul li:nth-child(" + (i+1) + ") {background-image: url(https:" + images[i] + ");}")
-	}
-	
-	//C. Add css rule to page
-	var entireCSSRule = heightRule;
-	for (i = 0; i < images.length; i ++)
-	{
-		entireCSSRule += imagesRule[i];
-	}
-	
-	css.innerHTML = entireCSSRule;
-	//css.innerHTML = ".test { color:aqua;}"; testing
-	document.body.appendChild(css); //DOM loads before so you dont see this in source (POTENTIAL LOADING PROBLEM)
-	
-	//3. Build accordion HTML
-	/*
-		<div class="eager-accordion">
-			<ul>
-			
-			<!--- Duplcate from here -->
-				<li>
-					<div>
-						<a href = "$link">
-							<h2>$title</h2>
-							<p>$caption</p>
-						</a>
-					</div>
-				</li>
-			<!-- End Duplication -->
-				
-			</ul>
-		</div>
-			
-	*/
-	var div = document.createElement("div");
-	var parentul = document.createElement("ul");
-	
-	
-	
-	var slides = []; //contains repeatable elements
-	
-	for (i = 0; i < images.length; i ++)
-	{
-		var li = document.createElement("li");
-		var liDiv = document.createElement("div");
-		var anchor = document.createElement("a");
-		var h2 = document.createElement("h2");
-		var p = document.createElement("p");
+  // Our app needs modern browser support
+  if (!document.addEventListener && !document.documentElement.classList && !document.documentElement.getAttribute) return;
+ 
+  var ready = function(fn) {
+    if (document.readyState !== 'loading') {
+      fn();
+    } else {
+      document.addEventListener('DOMContentLoaded', fn);
+    }
+  };
+  
+  var options = INSTALL_OPTIONS;
+  
+  var styleEl = document.createElement('style');
+  var styleString = '.eager-accordion { height:' + options.height + 'px }\n';
+  for (var i = 0; i < options.images.length; i++) {
+    styleString += '.eager-accordion ul li:nth-child(' + (i + 1) + ') { background-image: url("' + images[i] + '") }\n';
+  }
+  styleEl.innerHTML = styleString;
+  document.body.appendChild(styleEl);
+ 
+  var buildAccordian = function(images) {
+    /*
+    <div class="eager-accordion">
+      <ul>
+        <li>
+          <div>
+            <a href = "$link">
+              <h2>$title</h2>
+              <p>$caption</p>
+            </a>
+          </div>
+        </li>
+        <li>
+          ...
+        </li>
+      </ul>
+    </div>		
+    */
+    
+    var div = document.createElement('div');
+    div.classList.add('eager-accordion');
+    
+	var ul = document.createElement('ul');
 		
-		p.innerHTML = captions[i];
-		h2.innerHTML = titles[i];
-		anchor.href = links[i];
+	for (var i = 0; i < images.length; i ++) {
+	  var li = document.createElement('li'),
+	      liDiv = document.createElement('div'),
+          anchor = document.createElement('a'),
+	      h2 = document.createElement('h2'),
+	      p = document.createElement('p');
+
+      p.appendChild(document.createTextNode(images[i].caption));
+      h2.appendChild(document.createTextNode(images[i].title));
+      anchor.setAttribute('href', images[i].linkHref);
 		
-		//Building that repeatable elements
-		anchor.appendChild(h2);
-		anchor.appendChild(p);
-		liDiv.appendChild(anchor);
-		li.appendChild(liDiv);
-		
-		parentul.appendChild(li);
-		
+      anchor.appendChild(h2);
+      anchor.appendChild(p);
+      liDiv.appendChild(anchor);
+      li.appendChild(liDiv);
+      ul.appendChild(li);
 	}
-	
-	div.appendChild(parentul);
-	div.classList.add("eager-accordion");
 
-
-	var add = function(){
-  		//locationToAdd.appendChild(div);
-  		//console.log(locationToAdd);
-  		var el = Eager.createElement(locationToAdd);
-
-  		el.appendChild(div);
-  		}
-
-  	if (document.readyState == 'loading')
-    	document.addEventListener('DOMContentLoaded', add);
-	else
-    	add();
-})()
+	div.appendChild(ul);
+	return div;
+  }
+  
+  ready(function(){
+    Eager.createElement(options.location).appendChild(buildAccordian(options.images))
+  });
+})();

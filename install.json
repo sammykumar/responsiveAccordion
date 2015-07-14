@@ -1,13 +1,10 @@
 {
 	"resources": 
 	{
-		"head":
-		[{
+		"head": [{
 			"type":"style",
 			"src":"styles.css"
-		}],
-		"body":
-		[{
+		}, {
 			"type":"script",
 			"src":"script.js"
 		}]
@@ -33,7 +30,7 @@
 				"default":250
 			},
 			
-			"imagesArr":
+			"images":
 			{
 				"title":"Accordion Setup",
 				"type":"array",
@@ -47,7 +44,7 @@
 					
 					"properties":
 					{
-						"image":
+						"url":
 						{
 							"title":"Upload",
 							"type":"string",
@@ -65,7 +62,7 @@
 							"type":"string"
 						},	
 						
-						"link":
+						"linkHref":
 						{
 							"title":"Link",
 							"type":"string"
