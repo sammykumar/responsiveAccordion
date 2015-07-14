@@ -21,13 +21,16 @@
 			{
 		        "title": "Location",
 		        "type": "object",
-		        "format": "element"
+		        "format": "element",
+		        "order": 1
 			},
 			
 			"height":
 			{
 				"title":"Enter height",
-				"type":"integer"
+				"type":"integer",
+				"order":2,
+				"default":250
 			},
 			
 			"imagesArr":
@@ -35,6 +38,7 @@
 				"title":"Accordion Setup",
 				"type":"array",
 				"maxItems":5,
+				"order": 3,
 				
 				"items":
 				{
