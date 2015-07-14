@@ -104,7 +104,7 @@
 
 	var add = function(){
 		//document.body.appendChild(div);
-  		div = Eager.createElement(locationToAdd);
+  		locationToAdd.appendChild(div);
   	}
 
   	if (document.readyState == 'loading')
